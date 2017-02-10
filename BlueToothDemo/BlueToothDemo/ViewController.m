@@ -17,12 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = YES;
     
 }
 
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.navigationController pushViewController:[[BlueToothController alloc] init] animated:YES];
+- (IBAction)becomePeropheral:(id)sender {
+    
 }
 
+- (IBAction)connectPeropheral:(id)sender {
+    [self.navigationController pushViewController:[[BlueToothController alloc] init] animated:YES];
+}
 @end
